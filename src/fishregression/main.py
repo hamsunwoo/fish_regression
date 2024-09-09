@@ -8,8 +8,8 @@ app = FastAPI()
 def load_model():
     try:
         # 현재 작업 디렉토리에서 모델 파일 경로 설정
-        model_path = "/Users/seon-u/code/fishregression/src/fishregression/regression.pkl"
-        #model_path = os.path.join(os.getcwd(), "regression.pkl")
+        model_path = "/Users/seon-u/code/fishregression/src/fishregression/model/regression.pkl"
+        
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
         
@@ -21,13 +21,17 @@ def load_model():
         raise HTTPException(status_code=500, detail=f"Error loading model: {str(e)}")
 
 @app.get("/regression")
-def predict_weight(l: float):
+def predict_weight(length: float):
     regression_model = load_model()
 
     try:
-        prediction = regression_model.predict([[l**2, l]])
+        prediction = regression_model.predict([[length**2, length]])
     
-        return {"weight": prediction[0]}  # 배열에서 첫 번째 값 반환
+        return {
+                "length": length,
+                "weight": prediction[0]
+                }
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
+
