@@ -1,6 +1,6 @@
 [project]
 name = "fishregression"
-version = "0.2.0"
+version = "0.2.1"
 description = "Default template for PDM package"
 authors = [
     {name = "sunwoo", email = "summerham22@gmail.com"},
@@ -11,7 +11,6 @@ dependencies = [
     "numpy>=2.1.1",
     "fastapi>=0.114.0",
     "uvicorn>=0.30.6",
-    "fire>=0.6.0",
     "requests>=2.32.3",
 ]
 requires-python = ">=3.8"
