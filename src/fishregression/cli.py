@@ -10,7 +10,7 @@ def lr_api(length):
         'length': length,
     }
 
-    response = requests.get('http://127.0.0.1:8000/regression', params=params, headers=headers)
+    response = requests.get('http://127.0.0.1:8001/regression', params=params, headers=headers)
     data = json.loads(response.text)
     r = data['weight']
 
