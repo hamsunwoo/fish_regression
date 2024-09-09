@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 import os
+from fishregression.model.manager import get_model_path
 import pickle
 
 app = FastAPI()
@@ -7,8 +8,7 @@ app = FastAPI()
 # 모델 로드 함수
 def load_model():
     try:
-        # 현재 작업 디렉토리에서 모델 파일 경로 설정
-        model_path = "/Users/seon-u/code/fishregression/src/fishregression/model/regression.pkl"
+        model_path = get_model_path()
         
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
