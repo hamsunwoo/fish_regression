@@ -5,7 +5,7 @@
 groups = ["default", "matplotlib", "note", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:e51d1a2118463339f007dd541ef012a57b7b3bff4cba13216069c0ad6ef14865"
+content_hash = "sha256:59d1ffe141d4596337ddd204d1bcd64bda3c38c357c28c77fd61c3c751ed223e"
 
 [[metadata.targets]]
 requires_python = "==3.11.*"
@@ -207,7 +207,7 @@ name = "certifi"
 version = "2024.8.30"
 requires_python = ">=3.6"
 summary = "Python package for providing Mozilla's CA Bundle."
-groups = ["note"]
+groups = ["default", "note"]
 marker = "python_version == \"3.11\""
 files = [
     {file = "certifi-2024.8.30-py3-none-any.whl", hash = "sha256:922820b53db7a7257ffbda3f597266d435245903d80737e34f8a45ff3e3230d8"},
@@ -245,7 +245,7 @@ name = "charset-normalizer"
 version = "3.3.2"
 requires_python = ">=3.7.0"
 summary = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
-groups = ["note"]
+groups = ["default", "note"]
 marker = "python_version == \"3.11\""
 files = [
     {file = "charset-normalizer-3.3.2.tar.gz", hash = "sha256:f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"},
@@ -1518,7 +1518,7 @@ name = "requests"
 version = "2.32.3"
 requires_python = ">=3.8"
 summary = "Python HTTP for Humans."
-groups = ["note"]
+groups = ["default", "note"]
 marker = "python_version == \"3.11\""
 dependencies = [
     "certifi>=2017.4.17",
@@ -1860,7 +1860,7 @@ name = "urllib3"
 version = "2.2.2"
 requires_python = ">=3.8"
 summary = "HTTP library with thread-safe connection pooling, file post, and more."
-groups = ["note"]
+groups = ["default", "note"]
 marker = "python_version == \"3.11\""
 files = [
     {file = "urllib3-2.2.2-py3-none-any.whl", hash = "sha256:a448b2f64d686155468037e1ace9f2d2199776e17f0a46610480d311f73e3472"},
