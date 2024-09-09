@@ -1,6 +1,6 @@
 [project]
 name = "fishregression"
-version = "0.1.0"
+version = "0.2.0"
 description = "Default template for PDM package"
 authors = [
     {name = "sunwoo", email = "summerham22@gmail.com"},
@@ -8,14 +8,18 @@ authors = [
 dependencies = [
     "scikit-learn>=1.5.1",
     "pandas>=2.2.2",
+    "numpy>=2.1.1",
+    "fastapi>=0.114.0",
+    "uvicorn>=0.30.6",
+    "fire>=0.6.0",
 ]
-requires-python = "==3.11.*"
+requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 
 
 [tool.pdm]
-distribution = false
+distribution = true
 
 [tool.pdm.dev-dependencies]
 note = [
@@ -26,6 +30,10 @@ test = [
     "pytest-cov>=5.0.0",
 ]
 matplotlib = []
+
+[project.scripts]
+prediction = 'fishregression.cli:predict'
+
 
 [tool.pytest.ini_options]
 pythonpath = "src"
