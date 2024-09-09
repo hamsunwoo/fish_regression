@@ -8,7 +8,7 @@ app = FastAPI()
 def load_model():
     try:
         # 현재 작업 디렉토리에서 모델 파일 경로 설정
-        model_path = "/Users/seon-u/code/fishregression/src/fishregression/regression.pkl" 
+        model_path = "/Users/seon-u/code/fishregression/src/fishregression/regression.pkl"
         #model_path = os.path.join(os.getcwd(), "regression.pkl")
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
@@ -31,5 +31,3 @@ def predict_weight(l: float):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
-
-load_model()
