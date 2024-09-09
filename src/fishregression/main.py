@@ -29,9 +29,8 @@ def predict_weight(length: float):
     
         return {
                 "length": length,
-                "weight": prediction[0]
+                "weight": prediction
                 }
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
-
