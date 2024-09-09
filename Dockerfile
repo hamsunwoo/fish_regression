@@ -1,4 +1,4 @@
-FROM hamsunwoo/fishregression:0.2.0
+FROM python:3.11
 
 WORKDIR /code
 
