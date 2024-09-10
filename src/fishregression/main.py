@@ -9,7 +9,6 @@ app = FastAPI()
 def load_model():
     try:
         model_path = get_model_path()
-        
         with open(model_path, 'rb') as f:
             model = pickle.load(f)
         
@@ -34,3 +33,4 @@ def predict_weight(length: float):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
+
