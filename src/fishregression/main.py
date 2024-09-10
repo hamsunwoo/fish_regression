@@ -25,10 +25,9 @@ def predict_weight(length: float):
 
     try:
         prediction = regression_model.predict([[length**2, length]])
-    
         return {
                 "length": length,
-                "weight": prediction
+                "weight": prediction[0]
                 }
     
     except Exception as e:
