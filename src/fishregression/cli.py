@@ -28,7 +28,7 @@ def kn_api(length, weight):
         'w': weight,
     }
 
-    response = requests.get('http://127.0.0.1:8002/fish', params=params, headers=headers)
+    response = requests.get('http://43.202.33.77:8002/fish', params=params, headers=headers)
     data = json.loads(response.text)
     r = data['prediction']
 
