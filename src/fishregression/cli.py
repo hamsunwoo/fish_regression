@@ -10,7 +10,7 @@ def lr_api(length):
         'length': length,
     }
 
-    response = requests.get('http://43.202.33.77:8001/regression', params=params, headers=headers)
+    response = requests.get('http://3.36.106.226:8001/regression', params=params, headers=headers)
     data = json.loads(response.text)
     r = data['weight']
         
@@ -28,7 +28,7 @@ def kn_api(length, weight):
         'w': weight,
     }
 
-    response = requests.get('http://43.202.33.77:8002/fish', params=params, headers=headers)
+    response = requests.get('http://3.36.106.226:8002/fish', params=params, headers=headers)
     data = json.loads(response.text)
     r = data['prediction']
 
